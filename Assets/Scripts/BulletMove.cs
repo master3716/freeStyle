@@ -11,7 +11,7 @@ public class BulletMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(gameObject.name != "Bullet")
+        if (gameObject.name != "Bullet")
             AmmoManager.ammo--;
         setDirection();
 
@@ -65,5 +65,12 @@ public class BulletMove : MonoBehaviour
         }
         else
             transform.Translate(direction * speed * Time.deltaTime);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

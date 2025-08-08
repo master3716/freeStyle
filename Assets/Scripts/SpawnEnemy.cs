@@ -7,8 +7,8 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject player;
     public static int livingEnemies = 0;
     public float safeZone = 5;
-    public int maxEnemies = 3;
-    public float spawnCoolDown = 1;
+    public static int maxEnemies = 3;
+    public static float spawnCoolDown = 1;
     float lastSpawn = 0;
     float currentTime = 0;
     public Text score;
@@ -17,6 +17,9 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnCoolDown = 1;
+        maxEnemies = 3;
+        livingEnemies = 0;
         points = 0;
         score.text = "Score: " + points;
         livingEnemies = 0;
@@ -31,7 +34,6 @@ public class SpawnEnemy : MonoBehaviour
         if (CheckPlayer())
         {
             currentTime += Time.deltaTime;
-            print(livingEnemies);
             if (livingEnemies < maxEnemies && currentTime - lastSpawn >= spawnCoolDown)
             {
                 Spawn();
@@ -73,5 +75,15 @@ public class SpawnEnemy : MonoBehaviour
             isPlayer = false;
         }
         return isPlayer;
+    }
+    public static void ProggressWave(int wave)
+    {
+        print("Wave: " + wave);
+        maxEnemies = 3 + (int)(wave * 1.5);
+        print("max enemies: " + maxEnemies);
+        EnemyMovement.speed = 3 + (float)(wave * 0.25);
+        print("speed: " + EnemyMovement.speed);
+        spawnCoolDown -= (float)(wave * 0.125);
+        print("spawnCoolDown: " + spawnCoolDown);
     }
 }

@@ -2,17 +2,18 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 3;
+    public static float speed = 3;
     public GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        speed = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        print("SPEEED: " + speed);
         if (gameObject.name != "Enemy")
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
@@ -30,5 +31,6 @@ public class EnemyMovement : MonoBehaviour
     void OnDestroy()
     {
         SpawnEnemy.livingEnemies--;
+        WaveManager.enemyKills++;
     }
 }
