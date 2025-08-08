@@ -31,7 +31,6 @@ public class Movement : MonoBehaviour
     void Update()
     {
         checkEquipedAmmo();
-        print("here");
         currentTime += Time.deltaTime;
         Move();
         if (AmmoManager.ammo > 0)
@@ -48,7 +47,6 @@ public class Movement : MonoBehaviour
         {
             healtDebt += 10;
             Destroy(collision.gameObject);
-            SpawnEnemy.livingEnemies--;
             
         }
         if (health - healtDebt <= 0)
@@ -91,7 +89,6 @@ public class Movement : MonoBehaviour
     }
     void checkEquipedAmmo()
     {
-        print(equipedAmmo + " " + (ammo.Count - 1));
         if (equipedAmmo > ammo.Count - 1)
             equipedAmmo = ammo.Count - 1;
         else

@@ -14,7 +14,8 @@ public class ExplosiveAmmo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AmmoManager.ammo -= 10;
+        if(gameObject.name != "ExplosiveAmmo")
+            AmmoManager.ammo -= 10;
         setDirection();
 
         if (transform.position.x < 0)

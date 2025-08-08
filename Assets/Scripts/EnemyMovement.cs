@@ -24,8 +24,11 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Wepon") && gameObject.name != "Enemy")
         {
             Destroy(gameObject);
-            SpawnEnemy.livingEnemies--;
             SpawnEnemy.points += 10;
         }
+    }
+    void OnDestroy()
+    {
+        SpawnEnemy.livingEnemies--;
     }
 }

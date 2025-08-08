@@ -31,6 +31,7 @@ public class SpawnEnemy : MonoBehaviour
         if (CheckPlayer())
         {
             currentTime += Time.deltaTime;
+            print(livingEnemies);
             if (livingEnemies < maxEnemies && currentTime - lastSpawn >= spawnCoolDown)
             {
                 Spawn();

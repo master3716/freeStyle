@@ -11,7 +11,8 @@ public class BulletMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AmmoManager.ammo--;
+        if(gameObject.name != "Bullet")
+            AmmoManager.ammo--;
         setDirection();
 
         if (transform.position.x < 0)
