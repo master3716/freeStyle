@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,17 @@ public class shopping : MonoBehaviour
     public void CloseShop()
     {
         SceneManager.UnloadSceneAsync("Shop");
-        Time.timeScale = 1f;
+    
+        SceneStartCountdown countdown = FindObjectOfType<SceneStartCountdown>();
+        if (countdown != null)
+        {
+            countdown.StartCountdown();
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+      
     }
+  
 }

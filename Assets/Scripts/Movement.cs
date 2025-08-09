@@ -82,10 +82,15 @@ public class Movement : MonoBehaviour
         {
             equipedAmmo++;
         }
-         if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             equipedAmmo--;
         }
+        if(equipedAmmo == 1 && AmmoManager.ammo < 10)
+        {
+            equipedAmmo--;
+        }
+        AmmoManager.ammoIndecator.texture = AmmoManager.slectAmmoIndecator[equipedAmmo];
     }
     void checkEquipedAmmo()
     {

@@ -12,7 +12,9 @@ public class AbilityManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+       isRaged = false;
+       startRageTimer = false;
+       rageTImer = 0;
         rageBar.enabled = false;
     }
 
