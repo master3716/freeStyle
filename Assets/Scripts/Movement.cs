@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 public class Movement : MonoBehaviour
 {
     public static int speed = 5;
@@ -38,9 +39,15 @@ public class Movement : MonoBehaviour
         else
             print("out of ammo");
 
-        
+        ChangeDirection();
     }
-
+    void ChangeDirection()
+    {
+        if (transform.position.x < 0)
+            transform.localScale = new Vector3(1, 1, 1);
+        else
+            transform.localScale = new Vector3(-1, 1, 1);
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

@@ -34,7 +34,7 @@ public class AbilityManager : MonoBehaviour
             startRageTimer = false;
             rageTImer = 0;
             Movement.speed = 5;
-            Movement.player.GetComponent<Renderer>().material.color = new Color32(31, 142, 243, 255);
+            Movement.player.GetComponent<Renderer>().material.color = new Color32(255, 255, 255, 255);
             Movement.healtDebt += 20;
 
         }
