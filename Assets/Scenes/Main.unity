@@ -2361,7 +2361,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4334783836991956000, guid: a21456ed0417a8d4589ae23548720812, type: 3}
+  m_Sprite: {fileID: -5233965250794366567, guid: f79235904d7514d4cb4307562e10c2f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2404,6 +2404,9 @@ MonoBehaviour:
   hp: {fileID: 1506183040}
   p: {fileID: 1504846098}
   Explosive: {fileID: 1501478345}
+  playerSprites:
+  - {fileID: -5233965250794366567, guid: f79235904d7514d4cb4307562e10c2f7, type: 3}
+  - {fileID: 2625165067092954708, guid: 65187eb8d989c05458fdc3fc61bc9f88, type: 3}
 --- !u!58 &1504846102
 CircleCollider2D:
   m_ObjectHideFlags: 0
