@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public GameObject Explosive;
     public static int equipedAmmo = 0;
     List<GameObject> ammo = new List<GameObject>();
+    public List<Sprite> playerSprites;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -97,6 +98,7 @@ public class Movement : MonoBehaviour
         {
             equipedAmmo--;
         }
+        player.GetComponent<SpriteRenderer>().sprite = playerSprites[equipedAmmo];
         AmmoManager.ammoIndecator.texture = AmmoManager.slectAmmoIndecator[equipedAmmo];
     }
     void checkEquipedAmmo()
