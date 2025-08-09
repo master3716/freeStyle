@@ -16,7 +16,15 @@ public class BulletMove : MonoBehaviour
         setDirection();
 
         if (transform.position.x < 0)
+        {
             right = true;
+            transform.localScale = new Vector3(0.2205f, 0.2775f, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(0.2205f, -0.2775f, 1);
+        }
+
 
     }
 
@@ -34,21 +42,30 @@ public class BulletMove : MonoBehaviour
 
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         Vector2 velocity = rb.linearVelocity.normalized;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (velocity != Vector2.zero)
         {
             if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
             {
                 if (velocity.x > 0)
+                {
                     direction = Vector2.down;
+                }
                 else
+                {
                     direction = Vector2.up;
+                }
             }
             else
             {
                 if (velocity.y > 0)
+                {
                     direction = Vector2.right;
+                }
                 else
+                {
                     direction = Vector2.left;
+                }
             }
         }
         else

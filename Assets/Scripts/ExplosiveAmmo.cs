@@ -18,8 +18,15 @@ public class ExplosiveAmmo : MonoBehaviour
             AmmoManager.ammo -= 10;
         setDirection();
 
-        if (transform.position.x < 0)
+         if (transform.position.x < 0)
+        {
             right = true;
+            transform.localScale = new Vector3(0.2205f, 0.2775f, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(0.2205f, -0.2775f, 1);
+        }
     }
 
     // Update is called once per frame

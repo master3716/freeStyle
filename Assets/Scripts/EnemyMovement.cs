@@ -13,7 +13,6 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("SPEEED: " + speed);
         if (gameObject.name != "Enemy")
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
