@@ -10,7 +10,7 @@ public class AmmoManager : MonoBehaviour
     public RawImage selectedAmmoIndecator;
     public static List<Texture2D> slectAmmoIndecator;
     public List<Texture2D> slectAmmoIndecator2;
-
+ 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

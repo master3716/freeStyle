@@ -10,6 +10,7 @@ public class ExplosiveAmmo : MonoBehaviour
     bool right = false;
     Vector2 direction;
     public GameObject player;
+    public static int damage = 15;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,7 +53,7 @@ public class ExplosiveAmmo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Mutate"))
         {
             speed = 0;
             gameObject.GetComponent<CircleCollider2D>().radius = radius;

@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    public GameObject mutatedEnemy;
+    public static MutatedDemon mutatedDemon = new MutatedDemon();
     public GameObject enemy;
     public GameObject player;
     public static int livingEnemies = 0;
@@ -47,21 +49,22 @@ public class SpawnEnemy : MonoBehaviour
 
     void Spawn()
     {
-        int attempts = 0;
-        Vector3 spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
-        Vector3 dis = player.transform.position - spawn;
-        float distance = Mathf.Sqrt(Mathf.Pow(dis.x, 2) + Mathf.Pow(dis.y, 2));
-        while (distance < safeZone && attempts < 10)
+        if (!RollMutate())
         {
-            print(distance);
-            spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
-            dis = player.transform.position - spawn;
-            distance = Mathf.Sqrt(Mathf.Pow(dis.x, 2) + Mathf.Pow(dis.y, 2));
-            attempts++;
+            int attempts = 0;
+            Vector3 spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
+            Vector3 dis = player.transform.position - spawn;
+            float distance = Vector3.Distance(player.transform.position, spawn);
+            while (distance < safeZone && attempts < 10)
+            {
+                spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
+                distance = Vector3.Distance(player.transform.position, spawn);
+                attempts++;
+            }
+            if (attempts == 10)
+                spawn = new Vector3(0, 0, 0);
+            GameObject spawnEnemy = Instantiate(enemy, spawn, Quaternion.identity);
         }
-        if (attempts == 10)
-            spawn = new Vector3(0, 0, 0);
-        GameObject spawnEnemy = Instantiate(enemy, spawn, Quaternion.identity);
     }
     bool CheckPlayer()
     {
@@ -79,11 +82,40 @@ public class SpawnEnemy : MonoBehaviour
     public static void ProggressWave(int wave)
     {
         print("Wave: " + wave);
-        maxEnemies = 3 + (int)(wave * 1.5);
+        maxEnemies = 3 + Mathf.RoundToInt(Mathf.Pow(wave, 1.2f));
         print("max enemies: " + maxEnemies);
-        EnemyMovement.speed = 3 + (float)(wave * 0.25);
+        EnemyMovement.speed = 3 + wave * 0.25f;
         print("speed: " + EnemyMovement.speed);
-        spawnCoolDown -= (float)(wave * 0.125);
+        spawnCoolDown = Mathf.Max(0.5f, spawnCoolDown - 0.1f * wave);
         print("spawnCoolDown: " + spawnCoolDown);
+        WaveManager.waveThreshold.Add(WaveManager.GetWaveThreshold(wave));
+    }
+
+
+    public bool RollMutate()
+    {
+
+       if (Random.Range(1, 101) <= Mathf.Min(50, WaveManager.currentWave))
+        {
+            int attempts = 0;
+            Vector3 spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
+            Vector3 dis = player.transform.position - spawn;
+            float distance = Vector3.Distance(player.transform.position, spawn);
+            while (distance < safeZone && attempts < 10)
+            {
+                spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
+                distance = Vector3.Distance(player.transform.position, spawn);
+                attempts++;
+            }
+            if (attempts == 10)
+                spawn = new Vector3(0, 0, 0);
+            GameObject spawnEnemy = Instantiate(mutatedEnemy, spawn, Quaternion.identity);
+
+            mutatedDemon.SetDamage(Mathf.RoundToInt(10 + Mathf.Pow(WaveManager.currentWave, 1.3f)));
+            mutatedDemon.SetHealth(Mathf.RoundToInt(10 + Mathf.Pow(WaveManager.currentWave, 1.5f)));
+            mutatedDemon.SetSpeed(3 + WaveManager.currentWave * 0.2f);
+            return true;
+        }
+        return false;
     }
 }

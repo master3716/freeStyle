@@ -7,6 +7,7 @@ public class WaveManager : MonoBehaviour
 {
     public Text wave;
     public int waveCounter = 0;
+    public static int currentWave = 0;
     public static int enemyKills = 0;
     public static List<int> waveThreshold = new List<int>();
     public Text proggress;
@@ -19,15 +20,15 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(DeleteAfterDelay());
         waveThreshold.Add(0);
         waveThreshold.Add(10);
-        waveThreshold.Add(50);
-        waveThreshold.Add(100);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        proggress.text = "Proggress To Next Wave: " + enemyKills + " / " + waveThreshold[waveCounter + 1]; 
+        currentWave = waveCounter;
+        proggress.text = "Proggress To Next Wave: " + enemyKills + " / " + waveThreshold[waveCounter + 1];
         if (enemyKills >= waveThreshold[waveCounter + 1])
         {
             waveCounter++;
@@ -36,10 +37,16 @@ public class WaveManager : MonoBehaviour
             SpawnEnemy.ProggressWave(waveCounter);
         }
     }
-    
+
     IEnumerator DeleteAfterDelay()
     {
         yield return new WaitForSeconds(1f);
         wave.text = "";
+    }
+    public static int GetWaveThreshold(int wave)
+    {
+        float a = 10f;
+        float c = 1.7f; // tweak for difficulty curve
+        return Mathf.RoundToInt(a * Mathf.Pow(wave, c));
     }
 }

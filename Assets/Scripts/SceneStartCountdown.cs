@@ -42,7 +42,7 @@ public class SceneStartCountdown : MonoBehaviour
         countdownText.text = "";
 
         SetButtonsInteractable(true);
-        InputBlocked = false;  // allow input again
+        InputBlocked = false;  // allow input again 
         Time.timeScale = 1f;
     }
 

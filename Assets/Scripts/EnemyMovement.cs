@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Wepon") && gameObject.name != "Enemy")
+        if ((collision.gameObject.CompareTag("Wepon") || collision.gameObject.CompareTag("Explosive")) && gameObject.name != "Enemy")
         {
             Destroy(gameObject);
             SpawnEnemy.points += 10;

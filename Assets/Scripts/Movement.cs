@@ -61,6 +61,11 @@ public class Movement : MonoBehaviour
             Destroy(collision.gameObject);
             
         }
+        if (collision.gameObject.CompareTag("Mutate"))
+        {
+            healtDebt += SpawnEnemy.mutatedDemon.GetDamage();
+        }
+        
         if (health - healtDebt <= 0)
         {
             SpawnEnemy.points += Mathf.Floor(0.5f * currentTime);

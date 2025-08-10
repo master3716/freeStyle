@@ -8,6 +8,8 @@ public class BulletMove : MonoBehaviour
     bool right = false;
     public GameObject player;
     Vector2 direction;
+    public static int damage = 2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,7 +53,7 @@ public class BulletMove : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Mutate"))
         {
             Destroy(gameObject);
         }
