@@ -1,26 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;  // For List
 
 public class SceneStartCountdown : MonoBehaviour
 {
     public static SceneStartCountdown Instance;
-
+    
     public Text countdownText;
+    public List<Button> buttonsToDisable;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Global flag for input blocking
+    public static bool InputBlocked { get; private set; } = false;
+
     void Start()
     {
         StartCountdown();
         Instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
     public void StartCountdown()
     {
@@ -31,6 +28,9 @@ public class SceneStartCountdown : MonoBehaviour
 
     private IEnumerator CountdownRoutine()
     {
+        SetButtonsInteractable(false);
+        InputBlocked = true;  // block input
+
         Time.timeScale = 0f;
         int countdown = 3;
         while (countdown > 0)
@@ -40,6 +40,17 @@ public class SceneStartCountdown : MonoBehaviour
             countdown--;
         }
         countdownText.text = "";
+
+        SetButtonsInteractable(true);
+        InputBlocked = false;  // allow input again
         Time.timeScale = 1f;
+    }
+
+    private void SetButtonsInteractable(bool interactable)
+    {
+        foreach (var button in buttonsToDisable)
+        {
+            button.interactable = interactable;
+        }
     }
 }

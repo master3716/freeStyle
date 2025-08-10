@@ -33,15 +33,18 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkEquipedAmmo();
-        currentTime += Time.deltaTime;
-        Move();
-        if (AmmoManager.ammo > 0)
-            Attack();
-        else
-            print("out of ammo");
+        if (!SceneStartCountdown.InputBlocked)
+        {
+            checkEquipedAmmo();
+            currentTime += Time.deltaTime;
+            Move();
+            if (AmmoManager.ammo > 0)
+                Attack();
+            else
+                print("out of ammo");
 
-        ChangeDirection();
+            ChangeDirection();
+        }
     }
     void ChangeDirection()
     {
@@ -84,17 +87,11 @@ public class Movement : MonoBehaviour
     void Attack()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if(Input.GetKey(KeyCode.UpArrow))
-            shotDirection = Vector2.right;
-        else if (Input.GetKey(KeyCode.DownArrow))
-            shotDirection = Vector2.left;
-        else if (Input.GetKey(KeyCode.LeftArrow))
-            shotDirection = Vector2.up;
-        else if (Input.GetKey(KeyCode.RightArrow))
-            shotDirection = Vector2.down;
-        else
-            shotDirection = Vector2.zero;
 
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+        shotDirection = new Vector2(direction.y, -direction.x);
+    
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

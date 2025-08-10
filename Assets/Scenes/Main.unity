@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177069966}
   - component: {fileID: 177069965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: levelOne_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 282073325515473251, guid: 1dca17a26f1d59943b2fb025884ee801, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,8 +319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 709, y: 674.27966}
-  m_SizeDelta: {x: 931.4532, y: 78.238}
+  m_AnchoredPosition: {x: 602.66174, y: 667.49}
+  m_SizeDelta: {x: 1083.3047, y: 78.238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258239664
 MonoBehaviour:
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 278646556}
   - component: {fileID: 278646557}
   - component: {fileID: 278646558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Wepon
   m_Icon: {fileID: 0}
@@ -1513,6 +1513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 433874409}
+  buttonsToDisable:
+  - {fileID: 2007856331}
 --- !u!1 &1137497209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1868,7 @@ GameObject:
   - component: {fileID: 1357593833}
   - component: {fileID: 1357593832}
   - component: {fileID: 1357593836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2270,7 +2272,7 @@ GameObject:
   - component: {fileID: 1501478347}
   - component: {fileID: 1501478346}
   - component: {fileID: 1501478349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ExplosiveAmmo
   m_TagString: Wepon
   m_Icon: {fileID: 0}
@@ -2413,7 +2415,7 @@ GameObject:
   - component: {fileID: 1504846102}
   - component: {fileID: 1504846103}
   - component: {fileID: 1504846104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2973,7 +2975,7 @@ GameObject:
   - component: {fileID: 2007856332}
   - component: {fileID: 2007856331}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3173,6 +3175,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 619394802}
+  - {fileID: 177069966}
   - {fileID: 519420032}
   - {fileID: 1504846100}
   - {fileID: 278646555}
@@ -3182,4 +3185,3 @@ SceneRoots:
   - {fileID: 1872155835}
   - {fileID: 1396080833}
   - {fileID: 1501478348}
-  - {fileID: 177069966}
