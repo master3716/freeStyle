@@ -13,8 +13,7 @@ public class BulletMove : MonoBehaviour
     {
         if (gameObject.name != "Bullet")
             AmmoManager.ammo--;
-        setDirection();
-
+        direction = Movement.shotDirection;
         if (transform.position.x < 0)
         {
             right = true;
@@ -37,40 +36,7 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
 
     }
-    void setDirection()
-    {
-
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        Vector2 velocity = rb.linearVelocity.normalized;
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (velocity != Vector2.zero)
-        {
-            if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
-            {
-                if (velocity.x > 0)
-                {
-                    direction = Vector2.down;
-                }
-                else
-                {
-                    direction = Vector2.up;
-                }
-            }
-            else
-            {
-                if (velocity.y > 0)
-                {
-                    direction = Vector2.right;
-                }
-                else
-                {
-                    direction = Vector2.left;
-                }
-            }
-        }
-        else
-            direction = Vector2.zero;
-    }
+    
     void Move()
     {
         if (direction == Vector2.zero)

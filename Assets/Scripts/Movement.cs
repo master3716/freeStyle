@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     public static int equipedAmmo = 0;
     List<GameObject> ammo = new List<GameObject>();
     public List<Sprite> playerSprites;
+    public static Vector2 shotDirection = Vector2.zero;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -82,15 +83,28 @@ public class Movement : MonoBehaviour
     }
     void Attack()
     {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if(Input.GetKey(KeyCode.UpArrow))
+            shotDirection = Vector2.right;
+        else if (Input.GetKey(KeyCode.DownArrow))
+            shotDirection = Vector2.left;
+        else if (Input.GetKey(KeyCode.LeftArrow))
+            shotDirection = Vector2.up;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            shotDirection = Vector2.down;
+        else
+            shotDirection = Vector2.zero;
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = Instantiate(ammo[equipedAmmo], transform.position, Quaternion.Euler(0, 0, 90));
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (scroll > 0f || Input.GetKey(KeyCode.PageUp))
         {
             equipedAmmo++;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (scroll < 0f || Input.GetKey(KeyCode.PageDown))
         {
             equipedAmmo--;
         }

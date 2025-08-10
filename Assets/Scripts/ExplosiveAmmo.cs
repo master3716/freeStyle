@@ -16,9 +16,8 @@ public class ExplosiveAmmo : MonoBehaviour
     {
         if(gameObject.name != "ExplosiveAmmo")
             AmmoManager.ammo -= 10;
-        setDirection();
-
-         if (transform.position.x < 0)
+        direction = Movement.shotDirection;
+        if (transform.position.x < 0)
         {
             right = true;
             transform.localScale = new Vector3(0.2205f, 0.2775f, 1);
@@ -50,31 +49,7 @@ public class ExplosiveAmmo : MonoBehaviour
         else
             transform.Translate(direction * speed * Time.deltaTime);
     }
-    void setDirection()
-    {
 
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        Vector2 velocity = rb.linearVelocity.normalized;
-        if (velocity != Vector2.zero)
-        {
-            if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
-            {
-                if (velocity.x > 0)
-                    direction = Vector2.down;
-                else
-                    direction = Vector2.up;
-            }
-            else
-            {
-                if (velocity.y > 0)
-                    direction = Vector2.right;
-                else
-                    direction = Vector2.left;
-            }
-        }
-        else
-            direction = Vector2.zero;
-    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
