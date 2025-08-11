@@ -46,7 +46,7 @@ public class WaveManager : MonoBehaviour
     public static int GetWaveThreshold(int wave)
     {
         float a = 10f;
-        float c = 1.7f; // tweak for difficulty curve
+        float c = 1.7f;
         return Mathf.RoundToInt(a * Mathf.Pow(wave, c));
     }
 }

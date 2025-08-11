@@ -113,7 +113,7 @@ public class SpawnEnemy : MonoBehaviour
 
             mutatedDemon.SetDamage(Mathf.RoundToInt(10 + Mathf.Pow(WaveManager.currentWave, 1.3f)));
             mutatedDemon.SetHealth(Mathf.RoundToInt(10 + Mathf.Pow(WaveManager.currentWave, 1.5f)));
-            mutatedDemon.SetSpeed(3 + WaveManager.currentWave * 0.2f);
+            mutatedDemon.SetSpeed(Mathf.RoundToInt(3 + Mathf.Pow(WaveManager.currentWave, 0.5f)));
             return true;
         }
         return false;

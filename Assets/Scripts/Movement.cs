@@ -120,10 +120,9 @@ public class Movement : MonoBehaviour
     void checkEquipedAmmo()
     {
         if (equipedAmmo > ammo.Count - 1)
-            equipedAmmo = ammo.Count - 1;
-        else
-            if (equipedAmmo < 0)
             equipedAmmo = 0;
+        else if (equipedAmmo < 0)
+            equipedAmmo = ammo.Count - 1;
     }
     void DeductHealth()
     {
