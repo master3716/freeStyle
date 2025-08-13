@@ -21,6 +21,15 @@ public class LosingScreen : MonoBehaviour
     {
         SpawnEnemy.points = 0;
         SceneManager.LoadScene("Main");
-        
+
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    public void MainMenu()
+    {
+        SpawnEnemy.points = 0;
+        SceneManager.LoadScene("Welcome");
     }
 }
