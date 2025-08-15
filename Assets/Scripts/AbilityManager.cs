@@ -8,7 +8,7 @@ public class AbilityManager : MonoBehaviour
     public static bool startRageTimer = false;
     float rageTImer = 0;
     public Image rageBar;
-
+    public AudioClip rageDownSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +36,7 @@ public class AbilityManager : MonoBehaviour
             Movement.speed = 5;
             Movement.player.GetComponent<Renderer>().material.color = new Color32(255, 255, 255, 255);
             Movement.healtDebt += 20;
+            Movement.audioSourceStatic.PlayOneShot(rageDownSound);
 
         }
         if (isRaged)

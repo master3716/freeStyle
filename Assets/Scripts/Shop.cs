@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip rageSound;
+    public AudioClip ammoRefillSound;
+    public AudioClip healSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +27,7 @@ public class Shop : MonoBehaviour
             Movement.player.GetComponent<Renderer>().material.color = new Color32(199, 21, 133, 255);
             Movement.healtDebt -= 20;
             SpawnEnemy.points -= 20;
+            audioSource.PlayOneShot(rageSound);
         }
     }
     public void AmmoRefill()
@@ -30,6 +36,7 @@ public class Shop : MonoBehaviour
         {
             SpawnEnemy.points -= 50;
             AmmoManager.ammo += 50;
+            audioSource.PlayOneShot(ammoRefillSound);
         }
     }
     public void Heal()
@@ -38,6 +45,7 @@ public class Shop : MonoBehaviour
         {
             SpawnEnemy.points -= 100;
             Movement.healtDebt -= 20;
+            audioSource.PlayOneShot(healSound);
         }
     }
 }

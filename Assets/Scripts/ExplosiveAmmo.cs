@@ -11,6 +11,7 @@ public class ExplosiveAmmo : MonoBehaviour
     Vector2 direction;
     public GameObject player;
     public static int damage = 15;
+    public AudioClip explosionSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,7 +36,9 @@ public class ExplosiveAmmo : MonoBehaviour
         start += Time.deltaTime;
         Move();
         if (start > 5 && gameObject.name != "ExplosiveAmmo")
+        {
             Destroy(gameObject);
+        }
     }
 
     void Move()
@@ -58,6 +61,7 @@ public class ExplosiveAmmo : MonoBehaviour
             speed = 0;
             gameObject.GetComponent<CircleCollider2D>().radius = radius;
             StartCoroutine(DestroyAfterDelay());
+            Movement.audioSourceStatic.PlayOneShot(explosionSound);
         }
     }
     

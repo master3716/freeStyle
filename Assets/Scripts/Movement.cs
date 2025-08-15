@@ -21,6 +21,16 @@ public class Movement : MonoBehaviour
     List<GameObject> ammo = new List<GameObject>();
     public List<Sprite> playerSprites;
     public static Vector2 shotDirection = Vector2.zero;
+    private bool isDashing = false;
+    private float dashTime = 0.2f;
+    private float dashTimer = 0f;
+    private Vector2 moveDirection = Vector2.zero;
+    public AudioSource audioSource;
+    public static AudioSource audioSourceStatic;
+    public AudioClip dashSound;
+    public AudioClip ShotSounds;
+    public AudioClip enemyHitSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +38,7 @@ public class Movement : MonoBehaviour
         player = p;
         ammo.Add(projectile);
         ammo.Add(Explosive);
+        audioSourceStatic = audioSource;
     }
 
     // Update is called once per frame
@@ -37,6 +48,14 @@ public class Movement : MonoBehaviour
         {
             checkEquipedAmmo();
             currentTime += Time.deltaTime;
+
+            if (isDashing)
+            {
+                dashTimer -= Time.deltaTime;
+                if (dashTimer <= 0) isDashing = false;
+            }
+            Dash();
+
             Move();
             if (AmmoManager.ammo > 0)
                 Attack();
@@ -45,7 +64,7 @@ public class Movement : MonoBehaviour
 
             ChangeDirection();
         }
-    }
+    }        
     void ChangeDirection()
     {
         if (transform.position.x < 0)
@@ -59,11 +78,14 @@ public class Movement : MonoBehaviour
         {
             healtDebt += 10;
             Destroy(collision.gameObject);
-            
+            audioSource.volume = 0.7f;
+            audioSource.PlayOneShot(enemyHitSound);
         }
         if (collision.gameObject.CompareTag("Mutate"))
         {
             healtDebt += SpawnEnemy.mutatedDemon.GetDamage();
+            audioSource.volume = 0.7f;
+            audioSource.PlayOneShot(enemyHitSound);
         }
         
         if (health - healtDebt <= 0)
@@ -74,7 +96,9 @@ public class Movement : MonoBehaviour
     }
     void Move()
     {
-        Vector2 moveDirection = Vector2.zero;
+        if (isDashing) return;
+
+        moveDirection = Vector2.zero;
 
         if (Input.GetKey(KeyCode.W))
             moveDirection += Vector2.up;
@@ -85,9 +109,27 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             moveDirection += Vector2.right;
 
-        rb.linearVelocity = moveDirection.normalized * speed;
+        
+        if (moveDirection.sqrMagnitude > 1f)
+            moveDirection.Normalize();
+
+        rb.linearVelocity = moveDirection * speed;
+
         if (healtDebt != 0)
             DeductHealth();
+    }
+
+    void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            audioSource.volume = 0.2f;
+            audioSource.PlayOneShot(dashSound);
+            print("Dashing");
+            rb.linearVelocity = speed * 2.5f * moveDirection.normalized;
+            isDashing = true;
+            dashTimer = dashTime;
+        }
     }
     void Attack()
     {
@@ -96,11 +138,13 @@ public class Movement : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
         shotDirection = new Vector2(direction.y, -direction.x);
-    
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = Instantiate(ammo[equipedAmmo], transform.position, Quaternion.Euler(0, 0, 90));
+            audioSource.volume = 0.2f;
+            audioSource.PlayOneShot(ShotSounds);
         }
         if (scroll > 0f || Input.GetKey(KeyCode.PageUp))
         {
