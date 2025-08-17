@@ -9,7 +9,7 @@ public class ChargingDemon : MonoBehaviour
     public GameObject player;
     public Image chargeBar;
     private float timer = 0;
-    public static float maxChargeTime = 5f;
+    public static float maxChargeTime = 3f;
     private Vector2 direction;
     private bool move = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
