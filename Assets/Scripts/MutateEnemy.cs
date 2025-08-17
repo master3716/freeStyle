@@ -34,7 +34,6 @@ public class MutateEnemy : MonoBehaviour
     {
         if (gameObject.name != "MutateEnemy")
         {
-            print("MutateEnemy collided with: " + collision.gameObject.name);
             if (collision.gameObject.CompareTag("Wepon"))
                 health -= BulletMove.damage;
             else if (collision.gameObject.CompareTag("Explosive"))
@@ -50,7 +49,6 @@ public class MutateEnemy : MonoBehaviour
     {
         float percent = Mathf.Clamp01(health / ((float)demon.GetHealth()));
         healthBar.fillAmount = percent;
-        print("Health: " + health + ", Percent: " + percent);
         if (percent <= 0f)
             healthBar.enabled = false;
     }

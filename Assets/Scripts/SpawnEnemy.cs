@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     public GameObject mutatedEnemy;
     public static MutatedDemon mutatedDemon = new MutatedDemon();
-    public GameObject enemy;
+    public List<GameObject> enemy;
     public GameObject player;
     public static int livingEnemies = 0;
     public float safeZone = 5;
@@ -51,6 +52,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (!RollMutate())
         {
+            int typeEnemy = Random.Range(0, enemy.Count);
             int attempts = 0;
             Vector3 spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);
             Vector3 dis = player.transform.position - spawn;
@@ -63,7 +65,8 @@ public class SpawnEnemy : MonoBehaviour
             }
             if (attempts == 10)
                 spawn = new Vector3(0, 0, 0);
-            GameObject spawnEnemy = Instantiate(enemy, spawn, Quaternion.identity);
+           
+            GameObject spawnEnemy = Instantiate(enemy[typeEnemy], spawn, Quaternion.identity);
         }
     }
     bool CheckPlayer()
@@ -95,7 +98,7 @@ public class SpawnEnemy : MonoBehaviour
     public bool RollMutate()
     {
 
-       if (Random.Range(1, 101) <= Mathf.Min(50, WaveManager.currentWave))
+        if (Random.Range(1, 101) <= Mathf.Min(50, WaveManager.currentWave))
         {
             int attempts = 0;
             Vector3 spawn = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4), 0);

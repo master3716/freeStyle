@@ -81,18 +81,25 @@ public class Movement : MonoBehaviour
             audioSource.volume = 0.7f;
             audioSource.PlayOneShot(enemyHitSound);
         }
-        if (collision.gameObject.CompareTag("Mutate"))
+        else if (collision.gameObject.CompareTag("Mutate"))
         {
             healtDebt += SpawnEnemy.mutatedDemon.GetDamage();
             audioSource.volume = 0.7f;
             audioSource.PlayOneShot(enemyHitSound);
         }
+        else if (collision.gameObject.CompareTag("Charge"))
+        {
+            healtDebt += 10;
+            Destroy(collision.gameObject);
+            audioSource.volume = 0.7f;
+            audioSource.PlayOneShot(enemyHitSound);
+        }
         
         if (health - healtDebt <= 0)
-        {
-            SpawnEnemy.points += Mathf.Floor(0.5f * currentTime);
-            SceneManager.LoadScene("Lose");
-        }
+            {
+                SpawnEnemy.points += Mathf.Floor(0.5f * currentTime);
+                SceneManager.LoadScene("Lose");
+            }
     }
     void Move()
     {
@@ -125,7 +132,6 @@ public class Movement : MonoBehaviour
         {
             audioSource.volume = 0.2f;
             audioSource.PlayOneShot(dashSound);
-            print("Dashing");
             rb.linearVelocity = speed * 2.5f * moveDirection.normalized;
             isDashing = true;
             dashTimer = dashTime;

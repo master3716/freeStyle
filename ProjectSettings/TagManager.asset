@@ -9,6 +9,7 @@ TagManager:
   - Manager
   - Mutate
   - Explosive
+  - Charge
   layers:
   - Default
   - TransparentFX
