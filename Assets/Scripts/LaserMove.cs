@@ -8,7 +8,7 @@ public class LaserMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(gameObject.name != "laser")
+        if (gameObject.name != "laser")
             aliveLasar++;
         int rand = Random.Range(1, 100);
         if (rand > 50)
@@ -20,11 +20,14 @@ public class LaserMove : MonoBehaviour
     {
         timer += Time.deltaTime;
         transform.Translate(speed * Time.deltaTime, 0, 0);
-        if (timer >= 6f && gameObject.name != "laser")
+        if (timer >= 4f && gameObject.name != "laser")
         {
-            aliveLasar--;
             Destroy(gameObject);
         }
 
+    }
+    void OnDestroy()
+    {
+        aliveLasar--;
     }
 }

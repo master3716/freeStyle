@@ -12,10 +12,11 @@ public class AbilityManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       isRaged = false;
-       startRageTimer = false;
-       rageTImer = 0;
+        isRaged = false;
+        startRageTimer = false;
+        rageTImer = 0;
         rageBar.enabled = false;
+        LaserMove.aliveLasar = 0;
     }
 
     // Update is called once per frame

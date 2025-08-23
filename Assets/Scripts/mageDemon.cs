@@ -24,10 +24,10 @@ public class mageDemon : MonoBehaviour
         if (gameObject.name != "Mage")
         {
             timer += Time.deltaTime;
+            print(LaserMove.aliveLasar + " " + timer);
             if (timer >= cooldown && LaserMove.aliveLasar < 2)
             {
                 timer = 0f;
-                print("Attacking");
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
                 Attack();
             }
@@ -64,12 +64,17 @@ public class mageDemon : MonoBehaviour
         yield return new WaitForSeconds(delay);
         GetComponent<SpriteRenderer>().sprite = sprites[0];
     }
-    
-
-
-
-
-
+     void OnDestroy()
+    {
+        SpawnEnemy.livingEnemies--;
+        WaveManager.enemyKills++;
+    }
 }
+
+
+
+
+
+
 
 
