@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: bf23af2bf9a9c114a96d7708488c2da3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5896869045982831029
+    second: Lasar_0
+  - first:
+      213: 4223380405241874586
+    second: Lasar_1
+  - first:
+      213: -414053603582475906
+    second: Lasar_2
+  - first:
+      213: -1085062957580282911
+    second: Lasar_3
+  - first:
+      213: -6600787681158338193
+    second: Lasar_4
+  - first:
+      213: -4380310659266195525
+    second: Lasar_5
+  - first:
+      213: -5266183966953648184
+    second: Lasar_6
+  - first:
+      213: -2862307154658775929
+    second: Lasar_7
+  - first:
+      213: 612739953379241091
+    second: Lasar_8
+  - first:
+      213: -3781038869432703725
+    second: Lasar_9
+  - first:
+      213: 4481421933772577984
+    second: Lasar_10
+  - first:
+      213: 8218532556395471517
+    second: Lasar_11
+  - first:
+      213: 1922231072362805033
+    second: Lasar_12
+  - first:
+      213: 2872670226511948515
+    second: Lasar_13
+  - first:
+      213: 8331397025098129875
+    second: Lasar_14
+  - first:
+      213: -8386591531352388327
+    second: Lasar_15
+  - first:
+      213: -4570817598080893651
+    second: Lasar_16
+  - first:
+      213: -3887448832554690953
+    second: Lasar_17
+  - first:
+      213: 5445336390885869266
+    second: Lasar_18
+  - first:
+      213: -4401220714381871722
+    second: Lasar_19
+  - first:
+      213: 2424313249183017289
+    second: Lasar_20
+  - first:
+      213: -4808514160652213869
+    second: Lasar_21
+  - first:
+      213: -4520730063694821210
+    second: Lasar_22
+  - first:
+      213: -4875133512220665764
+    second: Lasar_23
+  - first:
+      213: 8153051864111649210
+    second: Lasar_24
+  - first:
+      213: -1682485491121673192
+    second: Lasar_25
+  - first:
+      213: 5626386529509653821
+    second: Lasar_26
+  - first:
+      213: 436339780480913877
+    second: Lasar_27
+  - first:
+      213: 2450736418054579912
+    second: Lasar_28
+  - first:
+      213: 3006412548759639875
+    second: Lasar_29
+  - first:
+      213: -9002369526492630374
+    second: Lasar_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lasar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1adc48723e5d150800000000000000
+      internalID: 5896869045982831029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134
+        width: 33
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9889c52a167c9a30800000000000000
+      internalID: 4223380405241874586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 134
+        width: 8
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e710f78f07cf04af0800000000000000
+      internalID: -414053603582475906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e31e7e2df411f0f0800000000000000
+      internalID: -1085062957580282911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6968c2939a4564a0800000000000000
+      internalID: -6600787681158338193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfc49cc9a20633c0800000000000000
+      internalID: -4380310659266195525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 34
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfcedf5591cae6b0800000000000000
+      internalID: -5266183966953648184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c2188deca0748d0800000000000000
+      internalID: -2862307154658775929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cebdcbdb3e08800800000000000000
+      internalID: 612739953379241091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315e4895e2d078bc0800000000000000
+      internalID: -3781038869432703725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc98235185313e30800000000000000
+      internalID: 4481421933772577984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d926feef0d71e0270800000000000000
+      internalID: 8218532556395471517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 1
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9273764d9f22daa10800000000000000
+      internalID: 1922231072362805033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 1
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eae518d956cdd720800000000000000
+      internalID: 2872670226511948515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 1
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d168b3e3711f9370800000000000000
+      internalID: 8331397025098129875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d0171bf67dc9b80800000000000000
+      internalID: -8386591531352388327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2db84d9c913190c0800000000000000
+      internalID: -4570817598080893651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 107
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776121522e10d0ac0800000000000000
+      internalID: -3887448832554690953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 1
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6824dc898b19b40800000000000000
+      internalID: 5445336390885869266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 1
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6957d253419bbe2c0800000000000000
+      internalID: -4401220714381871722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949a3d93e04e4a120800000000000000
+      internalID: 2424313249183017289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391a3e4f8d9b44db0800000000000000
+      internalID: -4808514160652213869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a88a0c75f32341c0800000000000000
+      internalID: -4520730063694821210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 82
+        width: 1
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c581c7376eb085cb0800000000000000
+      internalID: -4875133512220665764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab116b34975752170800000000000000
+      internalID: 8153051864111649210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ca1f92c5c96a8e0800000000000000
+      internalID: -1682485491121673192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 104
+        width: 1
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d377c1db0f41e40800000000000000
+      internalID: 5626386529509653821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1dfe0f7b03e0600800000000000000
+      internalID: 436339780480913877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6a144a9c3c20220800000000000000
+      internalID: 2450736418054579912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3475811d84ce8b920800000000000000
+      internalID: 3006412548759639875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lasar_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92fa9cbc98211380800000000000000
+      internalID: -9002369526492630374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 14dcc4617bd619145b8722e2a191f76f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lasar_0: 5896869045982831029
+      Lasar_1: 4223380405241874586
+      Lasar_10: 4481421933772577984
+      Lasar_11: 8218532556395471517
+      Lasar_12: 1922231072362805033
+      Lasar_13: 2872670226511948515
+      Lasar_14: 8331397025098129875
+      Lasar_15: -8386591531352388327
+      Lasar_16: -4570817598080893651
+      Lasar_17: -3887448832554690953
+      Lasar_18: 5445336390885869266
+      Lasar_19: -4401220714381871722
+      Lasar_2: -414053603582475906
+      Lasar_20: 2424313249183017289
+      Lasar_21: -4808514160652213869
+      Lasar_22: -4520730063694821210
+      Lasar_23: -4875133512220665764
+      Lasar_24: 8153051864111649210
+      Lasar_25: -1682485491121673192
+      Lasar_26: 5626386529509653821
+      Lasar_27: 436339780480913877
+      Lasar_28: 2450736418054579912
+      Lasar_29: 3006412548759639875
+      Lasar_3: -1085062957580282911
+      Lasar_30: -9002369526492630374
+      Lasar_4: -6600787681158338193
+      Lasar_5: -4380310659266195525
+      Lasar_6: -5266183966953648184
+      Lasar_7: -2862307154658775929
+      Lasar_8: 612739953379241091
+      Lasar_9: -3781038869432703725
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
